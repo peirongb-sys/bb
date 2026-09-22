@@ -1,0 +1,109 @@
+/* 全域基本樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 頁首 Header 樣式 */
+header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* 主內容區塊 (展示 5 個圖片) */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    flex: 1;
+}
+
+/* 圖片卡片樣式與動畫效果 */
+.card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.card-info {
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.card-info h3 {
+    font-size: 1.2rem;
+    color: #1e3c72;
+    margin-bottom: 0.3rem;
+}
+
+.card-info p {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* 需求 ④：滑鼠移過 ➔ 圖會動 (:hover) */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+.card:hover .img-wrapper img {
+    transform: scale(1.08);
+}
+
+/* 頁尾 Footer 樣式 */
+footer {
+    background-color: #1e293b;
+    color: #94a3b8;
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
