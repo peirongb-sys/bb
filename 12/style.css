@@ -1,0 +1,253 @@
+/* 共用設定與重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #333;
+    background-color: #f4f7f4;
+    line-height: 1.6;
+}
+
+/* 容器 */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 導覽列 */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #4a7c59;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4a7c59;
+}
+
+/* 主視覺 (Hero) */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                url('images/hero-bg.jpg') center/cover no-repeat;
+    background-color: #4a7c59;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+    margin-top: 70px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #729b79;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #5c7f62;
+}
+
+/* 通用區塊樣式 */
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #4a7c59;
+    margin-bottom: 40px;
+}
+
+/* 商品卡片 Grid 排版 */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-info .price {
+    color: #d97706;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calorie {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    font-size: 0.85rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: normal;
+}
+
+.product-info .desc {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.btn-card {
+    display: block;
+    text-align: center;
+    background-color: #4a7c59;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background 0.3s;
+}
+
+.btn-card:hover {
+    background-color: #3b6347;
+}
+
+/* FAQ 區塊 */
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+.faq-item h4 {
+    color: #4a7c59;
+    margin-bottom: 8px;
+}
+
+.faq-item p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* 教學用途聲明區塊 */
+.notice-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.notice-box {
+    background-color: #fef6e4;
+    border-left: 5px solid #d97706;
+    padding: 20px;
+    border-radius: 4px;
+    color: #78350f;
+}
+
+/* 頁尾 */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #4a7c59;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+/* 響應式微調 */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+}
